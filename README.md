@@ -39,6 +39,6 @@ contract DrivingLicense {
   // Function to check eligibility for a driving license with modifiers
   function checkEligibility() public view ageIsSet isEligibleAge returns (bool) {
     // Modifier checks have already happened, no additional checks needed here
-    return ownsVehicle;
+    return ownsVehicle[msg.sender];
   }
 }
